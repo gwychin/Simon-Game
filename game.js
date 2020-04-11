@@ -20,6 +20,15 @@ $(document).keydown(function() {
   }
 })
 
+$(document).click(function() {
+  if (!started) {
+    $("#level-title").text(`Level ${level}`);
+    nextSequence();
+    started = true;
+  }
+})
+
+
 //Plays sound of clicked button and keeps track of user's choices
 $(".btn").click(function() {
   var userChosenColor = $(this).attr("id");
