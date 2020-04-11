@@ -20,14 +20,6 @@ $(document).keydown(function() {
   }
 })
 
-$(document).click(function() {
-  if (!started) {
-    $("#level-title").text(`Level ${level}`);
-    nextSequence();
-    started = true;
-  }
-})
-
 
 //Plays sound of clicked button and keeps track of user's choices
 $(".btn").click(function() {
@@ -67,6 +59,7 @@ function checkAnswer(currentLevel) {
     }, 200);
 
     $("#level-title").text("Game Over, Press Any Key To Restart");
+
 
     startOver();
   }
